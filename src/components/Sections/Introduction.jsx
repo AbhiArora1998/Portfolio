@@ -56,7 +56,7 @@ function Introduction() {
     return <div className="intro" onMouseMove={getCoordinates}>
         <div className="side-by-side">
             <div className="InfoDetails">
-                <h1 className="title">
+                <h1 className="greetingsTitle">
                     {greetingsLanguage}
                 </h1>
                 <h1>

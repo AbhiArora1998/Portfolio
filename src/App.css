@@ -14,6 +14,24 @@ div {
 
 }
 
+.title{
+  animation: titleAnim 1s ease forwards;
+}
+
+@keyframes titleAnim{
+
+  0%{
+    opacity: 0;
+    padding-left: 0%;
+  }
+  
+  100%{
+    opacity: 1;
+    padding-left: 2%;
+    
+  }
+}
+
 /* Header */
 
 .navigationHeader{
@@ -40,11 +58,11 @@ padding: 2%;
 /* Intro */
 
 .InfoDetails{
-  margin: 25% 10% 20% 20%
+  animation: briefInfo 1s ease forwards;
 }
 
 .intro {
-  height: 90vh;
+  height: 94vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -64,13 +82,13 @@ padding: 2%;
 .eye1 {
   position: relative;
   bottom: 45px;
-  right: 170px;
+  right: 174px;
 }
 
 .eye2 {
   position: relative;
   bottom: 45px;
-  right: 105px;
+  right: 109px;
 }
 
 @media screen and (max-width: 768px) {
@@ -84,7 +102,7 @@ padding: 2%;
   }
 }
 
-.title{
+.greetingsTitle{
   animation: myAnim 3s ease infinite;
 }
 
@@ -99,4 +117,29 @@ padding: 2%;
 	100% {
 		opacity: 0;
 	}
+}
+
+@keyframes briefInfo{
+
+  0%{
+    opacity: 0;
+    margin: 25% 10% 20% 0%
+  }
+  
+  100%{
+    opacity: 1;
+    margin: 25% 10% 20% 20%
+  }
+}
+
+
+/* Experience */
+
+.ExperinceCardsFlexBox{
+  display: flex; 
+  width: 100%;
+}
+.ExperienceCard{
+  width: 40%;
+  margin: 5%;
 }
