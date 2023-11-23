@@ -1,0 +1,102 @@
+
+/* Main */
+html,
+body {
+  background-color: rgb(34, 9, 44);
+
+}
+
+h1,
+p,
+div {
+  color: white;
+  margin: 0;
+
+}
+
+/* Header */
+
+.navigationHeader{
+  width: 100%;
+  
+  display: flex;
+}
+
+.navigationAreas, .navigationTitle{
+  width: 50%;
+}
+.navigationTitle{
+  padding:0.2% 0 0 2% ;
+}
+.navigationAreas{
+  display: flex;
+  justify-content: flex-end;
+}
+.navigatoinLinks{
+padding: 2%;
+}
+/* Footer */
+
+/* Intro */
+
+.InfoDetails{
+  margin: 25% 10% 20% 20%
+}
+
+.intro {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.full-row {
+ display: contents;
+}
+
+.manContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.eye1 {
+  position: relative;
+  bottom: 45px;
+  right: 170px;
+}
+
+.eye2 {
+  position: relative;
+  bottom: 45px;
+  right: 105px;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .full-row {
+    display: block; /* Display on smaller screens */
+    grid-column: 1 / span 2; /* Span across both columns */
+  }
+}
+
+.title{
+  animation: myAnim 3s ease infinite;
+}
+
+@keyframes myAnim {
+	
+	50%,
+	100% {
+		opacity: 1;
+	}
+  0%,
+	
+	100% {
+		opacity: 0;
+	}
+}
