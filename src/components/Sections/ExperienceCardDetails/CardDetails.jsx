@@ -14,7 +14,7 @@ function CardDetails( props) {
 
             {isVisible && <div className="cardHover">
                         <div className="toolCards">
-                            <ToolCards skills={props.data.skills}></ToolCards>
+                            <ToolCards skills={props.data.skills} icons={props.data.icons}></ToolCards>
                         </div>
                     </div>}
 

@@ -7,12 +7,19 @@ import Background from './Background';
 function App() {
   return (
     <div className="App">
-      <div className='wrapper'>
+      {/* <div className='wrapper'>
        <Background></Background>
+      </div> */}
+      <div className='backGroundStyle'>
+        <Background></Background>
       </div>
+      <div className='content'>
         <Header></Header>
-        <BodySection></BodySection>
-        <Footer></Footer>
+          <BodySection></BodySection>
+          <Footer></Footer>
+      </div>
+      
+        
     </div>
   );
 }
