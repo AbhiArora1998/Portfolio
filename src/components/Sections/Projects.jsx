@@ -1,96 +1,148 @@
-import React, { useRef,useState } from "react";
+import React, { useRef, useState } from "react";
+import ProjectsAbout from "./projectsInfo/projectsAbout"
 import exploro from "../../assets/images/exploro.png"
+import tindog from "../../assets/images/tindog.png"
+import shoppingList from "../../assets/images/recipe.png"
+import todo from "../../assets/images/todo.png"
 
 function Project() {
 
     const paper1Ref = useRef(null);
     const paper2Ref = useRef(null);
     const paper3Ref = useRef(null);
+    const paper4Ref = useRef(null)
+    const paper5Ref = useRef(null)
+
     const book = useRef(null);
     const nextBtn = useRef(null);
     const prevBtn = useRef(null);
 
 
-    const [currentLocation, setCurrentLocation] = useState(1);
-        let numOfPapers = 3;
-        let maxLocation = numOfPapers+1
-    function openbook(){
-            if(book.current){
-                book.current.style.transform = "translateX(50%)"
-            }
-            if(prevBtn.current && nextBtn.current){
-                nextBtn.current.style.transform = "translateX(30%)"
-                prevBtn.current.style.transform = "translateX(-10%)"
+    const [currentLocation, setCurrentLocation] = useState(2);
+    let numOfPapers = 4;
+    let maxLocation = numOfPapers + 1
+    function openbook() {
+        if (book.current) {
+            book.current.style.transform = "translateX(50%)"
+        }
+        if (prevBtn.current && nextBtn.current) {
+            nextBtn.current.style.transform = "translateX(30%)"
+            prevBtn.current.style.transform = "translateX(-10%)"
 
-            }
+        }
     }
 
-    function closebook(){
+    function closebook() {
+
+    }
+    function goNextpage() {
         
-    }
-    function goNextpage(){
-        if(currentLocation < maxLocation && paper1Ref.current ){
-            switch(currentLocation){
-                case 1:
-                    openbook();
-                    paper1Ref.current.classList.add("flipped");
-                    paper1Ref.current.style.zIndex = 3
-                    break;
-                case 2:
-                    paper2Ref.current.classList.add("flipped");
-                    paper2Ref.current.style.zIndex = 4
+        if (currentLocation < maxLocation && paper1Ref.current) {
+           
+            setCurrentLocation((prevLocation) => {
+            console.log(prevLocation,"nextButton")
 
-                    break;
-                    
-                case 3:
-                    paper3Ref.current.classList.add("flipped");
-                    paper3Ref.current.style.zIndex = 5
-
-                    closebook();
-                    break;
-                default:
-                    throw new Error("unkown state")
-            }
-            setCurrentLocation((prevLocation)=>{ return prevLocation+1});
+                switch (currentLocation) {
+                    case 1:
+                        // openbook();
+                        // paper1Ref.current.classList.add("flipped");
+    
+                        break;
+                    case 2:
+                        paper1Ref.current.style.zIndex = 3
+                        paper2Ref.current.classList.add("flipped");
+                        paper2Ref.current.style.zIndex = 4
+    
+                        break;
+    
+                    case 3:
+                        paper3Ref.current.classList.add("flipped");
+                        paper3Ref.current.style.zIndex = 5
+    
+                        break;
+                    case 4:
+                        paper4Ref.current.classList.add("flipped");
+                        paper4Ref.current.style.zIndex = 6
+    
+                        closebook();
+                        break;
+                    case 5:
+                        paper5Ref.current.classList.add("flipped");
+                        paper5Ref.current.style.zIndex = 7
+    
+                        closebook();
+                        break;
+                    default:
+                        throw new Error("unkown state")
+                }
+                
+                return prevLocation + 1 });
         }
     }
-    function goprevPage(){
-        if(currentLocation > 1 && paper1Ref.current ){
-            switch(currentLocation){
-                case 1:
-                    openbook();
-                    paper1Ref.current.classList.remove("flipped");
-                    paper1Ref.current.style.zIndex = 5
-                    break;
-                case 2:
-                    paper2Ref.current.classList.remove("flipped");
-                    paper2Ref.current.style.zIndex = 4
-
-                    break;
-                    
-                case 3:
-                    paper3Ref.current.classList.remove("flipped");
-                    paper3Ref.current.style.zIndex = 3
-
-                    closebook();
-                    break;
-                default:
-                    throw new Error("unkown state")
+    function goprevPage() {
+        setCurrentLocation((prevLocation) => { 
+            if ((prevLocation) > 1 && paper1Ref.current) {
+                console.log((prevLocation),"backButton")
+            
+                
+                switch (prevLocation) {
+                    case 1:
+                        
+                        
+                        break;
+                    case 2:
+                        
+                       
+                        break;
+    
+                    case 3:
+                        paper2Ref.current.classList.remove("flipped");
+                        paper2Ref.current.style.zIndex = 6
+                        
+    
+                        
+                        break;
+                    case 4:
+                        paper3Ref.current.classList.remove("flipped");
+                        paper3Ref.current.style.zIndex = 5
+    
+                        
+                        break;
+                    case 5:
+                        
+                        paper4Ref.current.classList.remove("flipped");
+                        paper4Ref.current.style.zIndex = 4
+    
+                        closebook();
+                        break;
+                    default:
+                        throw new Error("unkown state")
+                }
+    
             }
-            setCurrentLocation((prevLocation)=>{ return prevLocation-1});
-        }
+            if(prevLocation <3){
+                return prevLocation
+            }
+            
+            return prevLocation - 1 });
+       
+        
+        
     }
 
 
     return <div style={{ height: "100vh" }}>
+        <h1 className="title">
+            Projects
+        </h1>
         <div className="projectContainer">
             <button ref={prevBtn} onClick={goprevPage} id="prev-btn">
-            <i className="fas fa-arrow-circle-left"></i>
+                <i className="fas fa-arrow-circle-left"></i>
 
             </button>
             <div ref={book} id="book" className="book">
                 {/* paper 1 */}
-                <div  ref={paper1Ref} id="p1" className="paper ">
+                <div ref={paper1Ref} id="p1" className="paper flipped ">
                     <div className="front ">
                         <div id="f1" className="front-content">
                             <h1>Project Index</h1>
@@ -106,12 +158,13 @@ function Project() {
                 <div ref={paper2Ref} id="p2" className="paper">
                     <div className="front">
                         <div id="f2" className="front-content">
-                            <h1>info 1</h1>
+                            <ProjectsAbout></ProjectsAbout>
                         </div>
                     </div>
                     <div className="back">
                         <div id="b2" className="back-content">
-                            <h1>Image 2</h1>
+                            <img src={tindog} alt="" />
+
                         </div>
                     </div>
                 </div>
@@ -119,22 +172,56 @@ function Project() {
                 <div ref={paper3Ref} id="p3" className="paper">
                     <div className="front">
                         <div id="f3" className="front-content">
-                            <h1>info 2</h1>
+                            <ProjectsAbout></ProjectsAbout>
+
                         </div>
                     </div>
                     <div className="back">
                         <div id="b3" className="back-content">
-                            <h1>Thank you</h1>
+                            <img src={shoppingList} alt="" />
+
                         </div>
                     </div>
                 </div>
-                
+                {/* paper 4 */}
+                <div ref={paper4Ref} id="p4" className="paper">
+                    <div className="front">
+                        <div id="f4" className="front-content">
+                            <ProjectsAbout></ProjectsAbout>
+
+                        </div>
+                    </div>
+                    <div className="back">
+                        <div id="b4" className="back-content">
+                            <img src={todo} alt="" />
+
+                        </div>
+                    </div>
+                </div>
+                {/* paper 5 */}
+                <div ref={paper5Ref} id="p5" className="paper">
+                    <div className="front">
+                        <div id="f5" className="front-content">
+                            <ProjectsAbout></ProjectsAbout>
+
+                        </div>
+                    </div>
+                    <div className="back">
+                        <div id="b5" className="back-content">
+                            <img src={todo} alt="" />
+
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
             <button ref={nextBtn} onClick={goNextpage} id="next-btn">
                 <i className="fas fa-arrow-circle-right"></i>
             </button>
         </div>
-       
+
     </div>
 }
 

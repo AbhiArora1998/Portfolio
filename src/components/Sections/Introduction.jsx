@@ -23,6 +23,8 @@ function Introduction() {
                     return "Namaste"
                 } else if (prevVal === "Namaste") {
                     return "Hola"
+                } else if(prevVal === "Hola"){
+                    return "Nǐ hǎo"
                 }
                 return "Hello"
             });

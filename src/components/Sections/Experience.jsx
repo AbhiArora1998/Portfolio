@@ -5,7 +5,7 @@ import experience from "./experienceObject"
 function Experience() {
     return <div className="experienceSection">
         <div className="title">
-            <h1>Experience</h1>
+            <h1 className="scrollAnimate">Experience</h1>
         </div>
         <div className="ExperinceCardsFlexBox">
             <div className="ExperienceCard card1">

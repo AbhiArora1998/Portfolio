@@ -15,11 +15,17 @@ function App() {
       </div>
       <div className='content'>
         <Header></Header>
-          <BodySection></BodySection>
+        <BodySection></BodySection>
+        <div className='footerStyle'>
           <Footer></Footer>
+        </div>
       </div>
-      
-        
+      <div style={{textAlign:"center"}}>
+            <p>
+                @ 2023 Abhishek
+            </p>
+        </div>
+
     </div>
   );
 }
