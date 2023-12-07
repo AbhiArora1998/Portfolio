@@ -65,7 +65,7 @@ function Introduction() {
                     <h1 className="greetingsTitles" >
                         I'm Abhishek Arora
                     </h1>
-                    <h2 style={{fontWeight:"300"}}>
+                    <h2 className="aboutStartupInfo">
                         Startup co-founder, full stack developer and a aws practioner 
                     </h2>
                 
