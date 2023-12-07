@@ -9,5 +9,5 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws s3 cp --recursive ./build s3://codepipeline-ca-central-1-240522212294/
+      - aws s3 cp --recursive ./build s3://www.abhiporfolio1998/
       - aws cloudfront create-invalidation --distribution-id E1IZ0IIDEKKX33 --path /\*
