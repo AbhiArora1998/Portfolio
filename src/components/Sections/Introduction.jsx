@@ -62,7 +62,7 @@ function Introduction() {
                     <h1  className="greetingsTitle">
                         {greetingsLanguage}
                     </h1>
-                    <h1 className="greetingsTitle" >
+                    <h1 className="greetingsTitles" >
                         I'm Abhishek Arora
                     </h1>
                     <h2 style={{fontWeight:"300"}}>

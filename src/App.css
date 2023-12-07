@@ -324,6 +324,9 @@ padding: 2%;
   animation: myAnim 3s ease infinite;
   font-size: 4rem;
 }
+.greetingsTitles{
+  font-size: 4rem;
+}
 
 @keyframes myAnim {
 	
