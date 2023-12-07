@@ -3,7 +3,7 @@ import CardDetails from "./ExperienceCardDetails/CardDetails"
 import experience from "./experienceObject"
 
 function Experience() {
-    return <div className="experienceSection">
+    return <div id="expreienceScroll" className="experienceSection">
         <div className="title">
             <h1 className="scrollAnimate">Experience</h1>
         </div>

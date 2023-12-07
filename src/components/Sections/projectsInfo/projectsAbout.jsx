@@ -1,21 +1,23 @@
 import React from "react";
 import angular from "../../../assets/images/angular.png"
- 
 
-function ProjectsAbout() {
+
+function ProjectsAbout(props) {
     return <div className="aboutInfoProjects">
-        <h1>About</h1>
+        <h1>{props.data.projectName}</h1>
         <div>
-            <h2 style={{padding:"5%"}}>This website was created to help people explore the area around and make decisive decision on the basis of weather in that area.</h2>
-            <h2 style={{padding:"5%"}}>This project informs the user about the weather for the entire day on the hourly basis. Furthermore, it also provides a brief detail about the attractions near by.</h2>
+            {props.data.projectAbout.map((value, index) => {
+                return <h3 key={index} style={{ padding: "2%" }}>{value}</h3>
+            })}
+
         </div>
-        <div style={{display:"flex", justifyContent:"space-evenly"}}>
-            <div className="borderRadius">
-                <img src={angular} alt="" />
-            </div>
-            <div className="borderRadius">
-                <img src={angular} alt="" />
-            </div>
+        <h2>Tools</h2>
+        <div style={{ display: "flex", justifyContent: "flex-start",flexWrap:"wrap", }}>
+            {props.data.projectTools.map((value,index) => {
+                return <div style={{textAlign:"center"}} key={index} className="borderRadius">
+                    <h4>{value}</h4>
+                </div>
+            })}
         </div>
     </div>
 }

@@ -4,7 +4,7 @@ import exploro from "../../assets/images/exploro.png"
 import tindog from "../../assets/images/tindog.png"
 import shoppingList from "../../assets/images/recipe.png"
 import todo from "../../assets/images/todo.png"
-
+import projectData from "./projectsInfo/projectsData";
 function Project() {
 
     const paper1Ref = useRef(null);
@@ -131,7 +131,7 @@ function Project() {
     }
 
 
-    return <div style={{ height: "100vh" }}>
+    return <div id="projectsScroll" style={{ height: "100vh" }}>
         <h1 className="title">
             Projects
         </h1>
@@ -143,14 +143,10 @@ function Project() {
             <div ref={book} id="book" className="book">
                 {/* paper 1 */}
                 <div ref={paper1Ref} id="p1" className="paper flipped ">
-                    <div className="front ">
-                        <div id="f1" className="front-content">
-                            <h1>Project Index</h1>
-                        </div>
-                    </div>
+                   
                     <div className="back">
                         <div id="b1" className="back-content">
-                            <img src={exploro} alt="" />
+                            <img src={projectData[0].projectImg} alt="" />
                         </div>
                     </div>
                 </div>
@@ -158,12 +154,12 @@ function Project() {
                 <div ref={paper2Ref} id="p2" className="paper">
                     <div className="front">
                         <div id="f2" className="front-content">
-                            <ProjectsAbout></ProjectsAbout>
+                            <ProjectsAbout data={projectData[0]}></ProjectsAbout>
                         </div>
                     </div>
                     <div className="back">
                         <div id="b2" className="back-content">
-                            <img src={tindog} alt="" />
+                            <img src={projectData[1].projectImg} alt="" />
 
                         </div>
                     </div>
@@ -172,13 +168,13 @@ function Project() {
                 <div ref={paper3Ref} id="p3" className="paper">
                     <div className="front">
                         <div id="f3" className="front-content">
-                            <ProjectsAbout></ProjectsAbout>
+                            <ProjectsAbout data={projectData[1]}></ProjectsAbout>
 
                         </div>
                     </div>
                     <div className="back">
                         <div id="b3" className="back-content">
-                            <img src={shoppingList} alt="" />
+                            <img src={projectData[2].projectImg} alt="" />
 
                         </div>
                     </div>
@@ -187,13 +183,13 @@ function Project() {
                 <div ref={paper4Ref} id="p4" className="paper">
                     <div className="front">
                         <div id="f4" className="front-content">
-                            <ProjectsAbout></ProjectsAbout>
+                            <ProjectsAbout data={projectData[2]}></ProjectsAbout>
 
                         </div>
                     </div>
                     <div className="back">
                         <div id="b4" className="back-content">
-                            <img src={todo} alt="" />
+                            <img src={projectData[3].projectImg} alt="" />
 
                         </div>
                     </div>
@@ -202,16 +198,11 @@ function Project() {
                 <div ref={paper5Ref} id="p5" className="paper">
                     <div className="front">
                         <div id="f5" className="front-content">
-                            <ProjectsAbout></ProjectsAbout>
+                            <ProjectsAbout data={projectData[3]}></ProjectsAbout>
 
                         </div>
                     </div>
-                    <div className="back">
-                        <div id="b5" className="back-content">
-                            <img src={todo} alt="" />
-
-                        </div>
-                    </div>
+                   
                 </div>
 
 

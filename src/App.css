@@ -6,9 +6,34 @@ body {
   font-family: sans-serif;
   position: relative;
   z-index: -2;
+  scroll-behavior: smooth;
   
 
 }
+
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #000000 0%, #1d0a4a  51%, #000000  100%);
+  margin: 4px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 300% auto;
+  color: white;            
+  box-shadow: 0 0 10px #eeeeee58,inset 0 0 2px white;
+  border-radius: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
 .backGroundStyle{
   background-color: black;
   position: fixed;
@@ -152,10 +177,45 @@ html::-webkit-scrollbar-track {
 
 .navigationHeader{
   width: 100%;
-  
+  padding-top: 1.5%;
   display: flex;
 }
-
+.navigationOuterBorder{
+  background-color: transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+.logoAnimation{
+  background: linear-gradient(#252525, #252525 50%, #fcfffe 50%, #ffffff);
+  background-size: 100% 200%;
+  /*trasition effect for background*/
+  transition: background 2s;
+}
+.navigationOuterBorder img{
+  background-color: transparent;
+  height: 140%;
+  width: 91%;
+  position: relative;
+  bottom: 19%;
+  left: -1%;
+}
+.logoAnimation{
+  background-position: 100% 100%;
+}
+.mainLoader{
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  left: 42%;
+  height: 250px;
+  width: 250px;
+  top: 200px;
+}
 .navigationAreas, .navigationTitle{
   width: 50%;
 }
@@ -476,7 +536,7 @@ li{
 
 .projectContainer{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 95%;
   font-family: sans-serif;
@@ -486,9 +546,11 @@ li{
 .book{
   
   position: relative;
-  width: 50%;
+  width: 80%;
   height: 80%;
+  left: -32%;
  transform: translate(50%);
+ 
 }
 
 .paper{
@@ -498,7 +560,7 @@ li{
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  
   perspective: 2000px;
  
 }
@@ -509,7 +571,7 @@ li{
   width: 50%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 40%;
   transform-origin: left;
   transition: transform .7s;
 
@@ -606,10 +668,13 @@ button > i{
  padding-right: 3%;
 }
 .borderRadius{
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.548);
   border-radius: 15px;
-  height: 100%;
-  width: 47%;
+  height: auto;
+  width: auto;
+  margin: 1%;
+  padding: 0 1%;
+  position: relative;
 }
 
 .borderRadius img{
@@ -623,8 +688,10 @@ button > i{
 
 /* scroll animate */
 .title{
-  animation: titleAnim 2s ease-in-out;
-  animation-timeline: view();
+  
+  animation: titleAnim linear  both;
+  animation-timeline: view(block);
+  animation-range: contain 0% contain 100%;
  
 }
 
@@ -633,8 +700,12 @@ button > i{
   0%{
     opacity: 0;
     padding-left: 0%;
+    
   }
+
+
   
+
   100%{
     opacity: 1;
     padding-left: 2%;

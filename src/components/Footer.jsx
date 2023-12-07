@@ -10,7 +10,7 @@ function Footer() {
             </div>
 
           
-                <a className="centerDiv" href="mailto:arora.abhishek705@gmail.com">
+                <a className="centerDiv btn-grad" href="mailto:arora.abhishek705@gmail.com">
                    <h1>Let's Connect</h1>
                        
                     
