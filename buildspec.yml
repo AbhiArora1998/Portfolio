@@ -1,0 +1,13 @@
+version: 0.2 
+
+phases:
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 cp --recursive ./build s3://codepipeline-ca-central-1-240522212294/
+      -aws cloudfront create-invalidation --distribution-id E1IZ0IIDEKKX33 --path /\*

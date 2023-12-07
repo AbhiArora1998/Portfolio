@@ -1,5 +1,8 @@
 
 /* Main */
+
+
+
 html,
 body {
   
@@ -8,9 +11,13 @@ body {
   z-index: -2;
   scroll-behavior: smooth;
   
+  
 
 }
 
+h1,h2,h3,h4,h5,h6,p{
+  color: white;
+}
 
          
 .btn-grad {
@@ -310,14 +317,12 @@ padding: 2%;
   .full-row {
     display: block; /* Display on smaller screens */
     grid-column: 1 / span 2; /* Span across both columns */
-    
-    
-  
   }
 }
 
 .greetingsTitle{
   animation: myAnim 3s ease infinite;
+  font-size: 4rem;
 }
 
 @keyframes myAnim {
@@ -765,3 +770,10 @@ button > i{
     
   }
 }
+
+
+
+/* media queries 
+
+greetingsTitle reduce the size of text
+*/

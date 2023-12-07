@@ -59,10 +59,10 @@ function Introduction() {
         <div className="side-by-side">
             <div className="InfoDetails infoCard">
                 
-                    <h1 style={{fontSize:"4rem"}} className="greetingsTitle">
+                    <h1  className="greetingsTitle">
                         {greetingsLanguage}
                     </h1>
-                    <h1 style={{fontSize:"4rem"}}>
+                    <h1 className="greetingsTitle" >
                         I'm Abhishek Arora
                     </h1>
                     <h2 style={{fontWeight:"300"}}>
