@@ -847,11 +847,30 @@ greetingsTitle reduce the size of text
     }
   }
 
+  .cardContainerExperience{
+    display: flex;
+    justify-content: center;
+  }
+
   .experienceContiner1, .experienceContiner2{
     display: block;
-    
+    text-align: center;
   }
   .experienceInfoContainer{
     width: 100%;
+  }
+
+  .exprienceToolsContainer{
+    display: inline-grid;
+    gap: 30px;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    justify-items: center;
+    
+  }
+  .aboutStartupInfo,.experienceAboutInfoPadding,.aboutStartupInfo{
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
   }
 }
