@@ -108,7 +108,7 @@ html::-webkit-scrollbar-track {
   height: 60px;
   display: flex;
   justify-content: center;
-  
+  display: flex;
   
 }
 .logoAnimation{
@@ -634,6 +634,7 @@ button > i{
   animation: titleAnim linear  both;
   animation-timeline: view(block);
   animation-range: contain 0% contain 100%;
+  margin-bottom: 5%;
  
 }
 
@@ -851,16 +852,11 @@ greetingsTitle reduce the size of text
   @keyframes titleAnim{
     0%{
       opacity: 0;
-      padding-left: 0;
       
-      position: relative;
-      top: 10px;
     }
     100%{
       opacity: 1;
-      padding-left: 40%;
-      position: relative;
-      top: 10px; 
+     text-align: center;
     }
   }
 
