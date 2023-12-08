@@ -275,7 +275,7 @@ padding: 2%;
 /* Experience */
 
 .experienceSection{
-  height: 100vh;
+  min-height: 100vh;
 
 }
 .ExperinceCardsFlexBox{
@@ -621,20 +621,17 @@ button > i{
 }
 
 @keyframes titleAnim{
-
   0%{
     opacity: 0;
     padding-left: 0%;
-    
+    position: relative;
+    top: 10px;
   }
-
-
-  
-
   100%{
     opacity: 1;
     padding-left: 2%;
-    
+    position: relative;
+    top: 10px; 
   }
 }
 
@@ -715,6 +712,76 @@ greetingsTitle reduce the size of text
 }
 */
 
+
+
+/* Experience 2.0 */
+.experienceContainer{
+  min-height: 95vh;
+  margin: 1% 2%;
+}
+.experienceContiner1{
+  display: flex;
+  justify-content: center;
+}
+.experienceContiner2{
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+
+.cardExperience{
+  width: 360px;
+  height: 400px;
+  background-color: #131212;
+  border-radius: 15px;
+  box-shadow:  5px 5px 8px rgba(0, 0, 0, 0.737),
+             -5px -5px 8px #0f0f0f44;
+}
+.experienceInfoContainer{
+  width: 40%;
+}
+.experienceLocation{
+  font-weight: 100;
+  padding: 2% 1%;
+}
+.experienceInfoTitle{
+  padding: 1%;
+}
+.exprienceToolsContainer{
+  display: inline-grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  margin: 2% 10%;
+  justify-items: center;
+  
+}
+.flexStyleforTools{
+  display: flex;
+  height: 50px;
+  
+  border-radius: 10px;
+  box-shadow:  5px 5px 8px rgba(0, 0, 0, 0.737),
+             -5px -5px 8px #0f0f0f44;
+  border-radius: 10px;
+  background-color: #1E1B1B;
+  align-items: center;
+  padding: 1% 10%;
+}
+.experienceTools{
+  
+  
+  width: fit-content;
+  padding: 2%;
+  
+}
+
+.experienceAboutInfoPadding{
+  padding:1% 0% 2% 10% ;
+}
+
+
 @media screen and (max-width: 768px) {
  
   .btn-grad {
@@ -762,5 +829,29 @@ greetingsTitle reduce the size of text
     padding-left: 5%;
 
   }
-  
+
+  /* Experience */
+  @keyframes titleAnim{
+    0%{
+      opacity: 0;
+      padding-left: 0;
+      
+      position: relative;
+      top: 10px;
+    }
+    100%{
+      opacity: 1;
+      padding-left: 40%;
+      position: relative;
+      top: 10px; 
+    }
+  }
+
+  .experienceContiner1, .experienceContiner2{
+    display: block;
+    
+  }
+  .experienceInfoContainer{
+    width: 100%;
+  }
 }
