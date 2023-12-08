@@ -17,7 +17,10 @@ body {
 h1,h2,h3,h4,h5,h6,p,div{
   color: white; margin: 0;
 }
-
+.App{
+  height: 100vh;
+  display: flex;
+}
 
 
          
@@ -120,7 +123,7 @@ html::-webkit-scrollbar-track {
   width: 91%;
   position: relative;
   bottom: 19%;
-  left: -1%;
+  
 }
 .logoAnimation{
   background-position: 100% 100%;
@@ -128,11 +131,15 @@ html::-webkit-scrollbar-track {
 .mainLoader{
   display: flex;
   position: absolute;
-  justify-content: space-around;
-  left: 42%;
+  
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
   height: 250px;
   width: 250px;
-  top: 200px;
+  
 }
 .navigationAreas, .navigationTitle{
   width: 50%;
@@ -151,16 +158,24 @@ padding: 2%;
 .footerStyle{
   border-top: 1px solid rgba(255, 255, 255, 0.149);
   border-bottom: 1px solid rgba(255, 255, 255, 0.149);
-
+}
+.footerStylecontainer{
+display: flex;
+ height: 20vh;
+  justify-content: space-between;
+  margin:0 15% 0 15%;
+padding-top: 5%;
+flex-direction: row-reverse;
+ 
 }
 .centerDiv{
-  width: 15%;
+  width: fit-content;
   padding: 2%;
-  height: 20%;
+  height: fit-content;
   color: white;
   text-decoration: none;
   border-radius: 15px;
-  border: 1px solid white;
+  
   display: flex;
   text-align: center;
   align-items: center;
@@ -868,9 +883,28 @@ greetingsTitle reduce the size of text
     justify-items: center;
     
   }
-  .aboutStartupInfo,.experienceAboutInfoPadding,.aboutStartupInfo{
+  .experienceAboutInfoPadding,.aboutStartupInfo{
     padding: 0 !important;
-    margin: 0 !important;
-    text-align: center !important;
+    margin: 5% !important;
+    text-align: justify !important;
+  }
+  /* Footer */
+
+  .footerStylecontainer{
+    display: block;
+    text-align: center;
+  }
+  .centerDiv{
+    width: 100%;
+    padding: 2%;
+    height: fit-content;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    
+    
+    text-align: center;
+    
+  
   }
 }

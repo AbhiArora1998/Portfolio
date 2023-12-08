@@ -35,15 +35,15 @@ function App() {
 
   return (
     <div className="App">
-      {isLoading && <div ref={loader5Ref} id="loader" className="navigationOuterBorder  mainLoader">
+      {true && <div ref={loader5Ref} id="loader" className="navigationOuterBorder  mainLoader">
         <img src={logo} alt="" />
       </div>}
 
       <div className='backGroundStyle'>
         <Background></Background>
       </div>
-      
-      {!isLoading && <div>
+
+      {/* {!isLoading && <div>
         <div className='content'>
           <Header data={isLoading}></Header>
 
@@ -58,7 +58,7 @@ function App() {
             @ 2023 Abhishek
           </p>
         </div>
-      </div>}
+      </div>} */}
 
     </div>
   );
