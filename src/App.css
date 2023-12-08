@@ -112,9 +112,11 @@ html::-webkit-scrollbar-track {
   
 }
 .logoAnimation{
+  background: -webkit-linear-gradient(#252525, #252525 50%, #fcfffe 50%, #ffffff);
   background: linear-gradient(#252525, #252525 50%, #fcfffe 50%, #ffffff);
   background-size: 100% 200%;
-  /*trasition effect for background*/
+  /* Transition effect for background */
+  -webkit-transition: background 2s;
   transition: background 2s;
 }
 .navigationOuterBorder img{
