@@ -19,7 +19,7 @@ const experience = [
         title: "Research Skilled Development Trainee",
         location: "Bussiness Intelgence Research Group, UNBC",
         content: [
-       "I led the development of high-performance SPAs for cents using Angular and primeNg, optimized an MS SQL database by 30%, and created a scalable RESTful API with .Net 6. I enhanced security with AWS IAM and Lambda, optimized image storage via AWS S3 integration, and collaborated on GitLab for a 20% reduction in bug-related inquiries."
+       "I led the development of high-performance Single Page Application for client using Angular and primeNg, optimized an MS SQL database by 30%, and created a scalable RESTful API with .Net 6. I enhanced security with AWS IAM and Lambda, optimized image storage via AWS S3 integration, and collaborated on GitLab for a 20% reduction in bug-related inquiries."
         ],
         skills: ["Angular", "Flutter", ".Net6", "SQL", "AWS", "Javacript", "HTML", "CSS", "Dart", "Git"],
         icons: [angular,flutter,net,sql,aws,js,html,css,dart,git]
@@ -31,9 +31,7 @@ const experience = [
         title: "Database Administrator Trainee",
         location: "Northern Hydrometeorology Group, UNBC",
         content: [
-            "Designed and implemented a normalized Hydro-Meteorological Database in MS Access, By structuring the database for efficient data organization, I achieved a notable 25% reduction in data retrieval time, significantly enhancing data access and analysis capabilities.",
-            "Created a custom Python script, utilizing expertise in Pandas and NumPy packages, to migrate 15 years of weather data, such as temperature, humidity, and precipitation, from Excel to MS Access.",
-            "Conducted research on various database hosting options (AWS and Azure) and maintained a feasibility document to recommend the organization's most cost-effective and secure database hosting solution."
+            "I Implemented an optimized Hydro-Meteorological Database in MS Access, reducing data retrieval time by 25% and enhancing data accessibility. Also, crafted a Python script using Pandas and NumPy to migrate 15 years of weather data from Excel. Researched AWS and Azure for a secure, cost-effective hosting solution, resulting in a detailed feasibility document for the organization's guidance. "
 
         ],
         skills: ["Python", "SQL", "AWS", "NumPY", "MS Access", "Excel", "Git"],

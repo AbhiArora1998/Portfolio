@@ -80,7 +80,7 @@ function Experience() {
                             April 2022 - Present
                         </h3>
                         <h3 className="aboutStartupInfo" style={{ margin: "5%" }}>
-                            {experience[0].content}
+                            {experience[1].content}
                         </h3>
                     </div>
                 </div>
