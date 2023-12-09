@@ -36,114 +36,113 @@ function Project() {
 
     }
     function goNextpage() {
-        
+
         if (currentLocation < maxLocation && paper1Ref.current) {
-           
+
             setCurrentLocation((prevLocation) => {
-            console.log(prevLocation,"nextButton")
+                console.log(prevLocation, "nextButton")
 
                 switch (currentLocation) {
                     case 1:
                         // openbook();
                         // paper1Ref.current.classList.add("flipped");
-    
+
                         break;
                     case 2:
                         paper1Ref.current.style.zIndex = 3
                         paper2Ref.current.classList.add("flipped");
                         paper2Ref.current.style.zIndex = 4
-    
+
                         break;
-    
+
                     case 3:
                         paper3Ref.current.classList.add("flipped");
                         paper3Ref.current.style.zIndex = 5
-    
+
                         break;
                     case 4:
                         paper4Ref.current.classList.add("flipped");
                         paper4Ref.current.style.zIndex = 6
-    
+
                         closebook();
                         break;
                     case 5:
                         paper5Ref.current.classList.add("flipped");
                         paper5Ref.current.style.zIndex = 7
-    
+
                         closebook();
                         break;
                     default:
                         throw new Error("unkown state")
                 }
-                
-                return prevLocation + 1 });
+
+                return prevLocation + 1
+            });
         }
     }
     function goprevPage() {
-        setCurrentLocation((prevLocation) => { 
+        setCurrentLocation((prevLocation) => {
             if ((prevLocation) > 1 && paper1Ref.current) {
-                console.log((prevLocation),"backButton")
-            
-                
+                console.log((prevLocation), "backButton")
+
+
                 switch (prevLocation) {
                     case 1:
-                        
-                        
+
+
                         break;
                     case 2:
-                        
-                       
+
+
                         break;
-    
+
                     case 3:
                         paper2Ref.current.classList.remove("flipped");
                         paper2Ref.current.style.zIndex = 6
-                        
-    
-                        
+
+
+
                         break;
                     case 4:
                         paper3Ref.current.classList.remove("flipped");
                         paper3Ref.current.style.zIndex = 5
-    
-                        
+
+
                         break;
                     case 5:
-                        
+
                         paper4Ref.current.classList.remove("flipped");
                         paper4Ref.current.style.zIndex = 4
-    
+
                         closebook();
                         break;
                     default:
                         throw new Error("unkown state")
                 }
-    
+
             }
-            if(prevLocation <3){
+            if (prevLocation < 3) {
                 return prevLocation
             }
-            
-            return prevLocation - 1 });
-       
-        
-        
+
+            return prevLocation - 1
+        });
+
+
+
     }
 
 
-    return <div id="projectsScroll" style={{ height: "100vh" }}>
+    return <div id="projectsScroll" style={{ minHeight: "100vh" }}>
         <h1 className="title">
             Projects
         </h1>
         <div className="projectContainer">
-            <button ref={prevBtn} onClick={goprevPage} id="prev-btn">
-                <i className="fas fa-arrow-circle-left"></i>
 
-            </button>
             <div ref={book} id="book" className="book">
                 {/* paper 1 */}
                 <div ref={paper1Ref} id="p1" className="paper flipped ">
-                   
+
                     <div className="back">
                         <div id="b1" className="back-content">
                             <img src={projectData[0].projectImg} alt="" />
@@ -202,17 +201,21 @@ function Project() {
 
                         </div>
                     </div>
-                   
+
                 </div>
 
 
 
             </div>
-            <button ref={nextBtn} onClick={goNextpage} id="next-btn">
-                <i className="fas fa-arrow-circle-right"></i>
-            </button>
-        </div>
 
+        </div>
+        <button ref={prevBtn} onClick={goprevPage} id="prev-btn">
+            <i className="fas fa-arrow-circle-left"></i>
+
+        </button>
+        <button ref={nextBtn} onClick={goNextpage} id="next-btn">
+            <i className="fas fa-arrow-circle-right"></i>
+        </button>
     </div>
 }
 

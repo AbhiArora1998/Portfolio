@@ -12,13 +12,20 @@ function ProjectsAbout(props) {
 
         </div>
         <h2>Tools</h2>
-        <div style={{ display: "flex", justifyContent: "flex-start",flexWrap:"wrap", }}>
+        <div className="projectToolsContainer">
+            {props.data.projectTools.map((value,index) => {
+                return <div className="flexStyleforProjectTools" key={index} >
+                    <h4>{value}</h4>
+                </div>
+            })}
+        </div>
+        {/* <div style={{ display: "flex", justifyContent: "flex-start",flexWrap:"wrap", }}>
             {props.data.projectTools.map((value,index) => {
                 return <div style={{textAlign:"center"}} key={index} className="borderRadius">
                     <h4>{value}</h4>
                 </div>
             })}
-        </div>
+        </div> */}
     </div>
 }
 export default ProjectsAbout;
