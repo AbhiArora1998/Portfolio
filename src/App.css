@@ -915,6 +915,7 @@ greetingsTitle reduce the size of text
   .footerStylecontainer{
     display: block;
     text-align: center;
+    min-height: 50vh;
   }
   .centerDiv{
     width: 100%;
