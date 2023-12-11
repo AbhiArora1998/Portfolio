@@ -146,7 +146,9 @@ function Project() {
                     <div className="back">
                         <div id="b1" className="back-content">
                             <img src={projectData[0].projectImg} alt="" />
+                           
                         </div>
+                        
                     </div>
                 </div>
                 {/* paper 2 */}
@@ -159,7 +161,7 @@ function Project() {
                     <div className="back">
                         <div id="b2" className="back-content">
                             <img src={projectData[1].projectImg} alt="" />
-
+                            
                         </div>
                     </div>
                 </div>

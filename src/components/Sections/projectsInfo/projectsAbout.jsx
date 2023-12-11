@@ -1,5 +1,7 @@
 import React from "react";
-import angular from "../../../assets/images/angular.png"
+import git from "../../../assets/images/git.png"
+import live from "../../../assets/images/live.png"
+
 
 
 function ProjectsAbout(props) {
@@ -19,13 +21,10 @@ function ProjectsAbout(props) {
                 </div>
             })}
         </div>
-        {/* <div style={{ display: "flex", justifyContent: "flex-start",flexWrap:"wrap", }}>
-            {props.data.projectTools.map((value,index) => {
-                return <div style={{textAlign:"center"}} key={index} className="borderRadius">
-                    <h4>{value}</h4>
-                </div>
-            })}
-        </div> */}
+        <div className="linksProjects">
+            <a href={props.data.projectLinks[0]} target="_blank"><img src={git} height="50px" style={{cursor:"pointer"}} alt="" /></a>
+            <a href={props.data.projectLinks[1]} target="_blank"><img src={live} height="50px" style={{cursor:"pointer"}} alt="" /></a>
+        </div>
     </div>
 }
 export default ProjectsAbout;
