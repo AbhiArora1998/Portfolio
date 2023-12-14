@@ -5,7 +5,7 @@ function Header(props) {
 
     return <div className="navigationHeader">
         <div className="navigationTitle">
-            <div className="navigationOuterBorder logoAnimation">
+            <div className="navigationOuterBorder logoAnimationMain">
                 <img src={logo} alt="" />
             </div>
         </div>

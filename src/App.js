@@ -12,26 +12,25 @@ function App() {
 
   const loader5Ref = useRef(null)
 
-
-
-
-
-  useEffect(() => {
-    // Check if loader5Ref.current is not null before accessing it
-    if (loader5Ref.current) {
-      loader5Ref.current.classList.add("logoAnimation");
-    }
-  }, []);
   const [isLoading, changeLoading] = useState(true);
+
+
+
   useEffect(() => {
-    // Using setInterval to update the seconds state every second
+    changeLoading(true)
     const intervalId = setInterval(() => {
       changeLoading(false)
     }, 2500); // Interval set to 1000 milliseconds (1 second)
 
+    if (loader5Ref.current && isLoading==true) {
+      loader5Ref.current.classList.add("logoAnimation");
+    }
     // Clear the interval on component unmount to avoid memory leaks
     return () => clearInterval(intervalId);
+    
   }, []);
+  
+
 
   return (
     <div className="App">

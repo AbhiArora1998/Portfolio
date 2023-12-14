@@ -111,13 +111,33 @@ html::-webkit-scrollbar-track {
   display: flex;
   
 }
+.logoAnimationMain{
+  background: -webkit-linear-gradient(#252525, #252525 50%, #fcfffe 50%, #ffffff);
+  background: linear-gradient(#252525, #252525 50%, #fcfffe 50%, #ffffff);
+  background-size: 100% 200%;
+  background-position: 100% 100%;
+  /* Transition effect for background */
+  -webkit-transition: background 2s;
+  transition: background 2s;
+  
+}
+
 .logoAnimation{
   background: -webkit-linear-gradient(#252525, #252525 50%, #fcfffe 50%, #ffffff);
   background: linear-gradient(#252525, #252525 50%, #fcfffe 50%, #ffffff);
   background-size: 100% 200%;
   /* Transition effect for background */
-  -webkit-transition: background 2s;
-  transition: background 2s;
+  animation: changewidth 2.5s infinite;
+}
+
+@keyframes changewidth {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
 }
 .navigationOuterBorder img{
   background-color: transparent;
@@ -127,9 +147,7 @@ html::-webkit-scrollbar-track {
   bottom: 19%;
   
 }
-.logoAnimation{
-  background-position: 100% 100%;
-}
+
 .mainLoader{
   display: flex;
   position: absolute;
