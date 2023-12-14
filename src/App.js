@@ -34,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      hello
       {isLoading && <div ref={loader5Ref} id="loader" className="navigationOuterBorder  mainLoader">
         <img src={logo} alt="" />
       </div>}
